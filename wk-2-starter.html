@@ -14,18 +14,35 @@
 <script>
 //examples in slides
 // #1
-
+let myBoolean = true;
+let myNumber = 5;
+let mySecondNumber = 5.0;
+let myString = "peanuts & m&m's";
+//What would be the numeric index of 's' in the above statement?
+// first is 6 - it starts with 0, second is 16
 
 // #2
-
+let a = 5;
+b = 10; 
+// not ok, b has not been declared.
 
 
 // #3
-
-
+let a = 5;
+a = 7;
+// ok, a is declared as a variable that can be reassigned
 
 // #4
+var b = 5;
+b = 10;
+// will work but not ok - obsolete. change to let instead of var
 
+// #5
+let myString = "gummy bears";
+myString = null;
+
+let unassignedVariable;
+//unassignedVariable == undefined;
 
 </script>
 <!-- 🔥🔥🔥🔥🔥🔥 start part 2 - lecture here javascript 🔥🔥🔥🔥🔥🔥 -->
@@ -36,14 +53,19 @@
     let c   = 15;
     const d = '5';
     let e   = 'my name';
-    const f = 'is liz';
+    const f = 'is tim';
 
     console.group('Addition');
-
+    console.log(a + b); //13
+    console.log( a + d); //105
+    console.log(e + ' ' + f); // my name is tim
+    console.log(e += ' is the batman'); //my name is the batman
     console.groupEnd();
 
     console.group('Multiplication');
-
+    console.log(a * 3); //30
+    console.log(a * b); //30
+    console.log(b * c); //45
     console.groupEnd();
 
     a++;
@@ -51,7 +73,9 @@
     --b;
     c += a;
     console.group('Incrementing');
-
+    console.log(a); //11
+    console.log(b); //1 
+    console.log(c); //26
     console.groupEnd();  
 </script>
 </body>
